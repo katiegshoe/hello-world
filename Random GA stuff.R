@@ -16,7 +16,7 @@ ga_source$year <- as.numeric(ga_source$year)
 ga_source$dayOfWeek <- as.numeric(ga_source$dayOfWeek)
 
 ga_source$date_c <- paste("the-bridge/",ga_source$year,"/",ga_source$month,"/",ga_source$day, sep="")
-ga_source.df$posted <- mapply(grepl, pattern=ga_source.df$date_c, x=ga_source.df$pagePath)
+ga_source$posted <- mapply(grepl, pattern=ga_source$date_c, x=ga_source$pagePath)
 
 
 #Combine similar data sources
